@@ -119,7 +119,8 @@ em{
     box-shadow: 0px -5px 5px -5px #0D240E, 0px 5px 5px -5px #0D240E;
     font-family: "abelregular", Arial, Helvetica, sans-serif;
     color: rgb(14, 42, 15, 0.9);
-    padding: 0 45px;
+    padding: 20px 45px;
+    position: relative;
 }
 
 .footer{
@@ -130,7 +131,7 @@ em{
 
 label{
     display: inline-block;
-    width: 100%;
+    width: 70%;
 }
 
 label span{
@@ -145,7 +146,7 @@ p{
 input{
     width: 70%;
     border: 1px solid rgb(13, 36, 14, 0.3);
-    height: 25px;
+    height: 30px;
     border-radius: 3px;
     background-color: rgb(173, 176, 167, 0.3);
     outline: none;
@@ -163,7 +164,7 @@ input{
     font-weight: 600;
     color: rgb(14, 42, 15, 0.9);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    top: 640px;
+    top: 340px;
     left: 45px;
 }
 
@@ -196,4 +197,32 @@ input{
 .form-wrapper button:active{
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
+
+/* Validation styling */
+
+input[type="password"]:user-invalid{
+    border: 1px solid #EF233C;
+}
+
+span.error{
+    display: inline-block;
+    position: absolute;
+    left: 45px;
+    bottom: 35px;
+}
+
+input[type="password"] + span.error::after{
+    content: "* Password do not match";
+    display: inline-block;
+    width: 12.3vw;
+    position: absolute;
+    font-size: 70%;
+    color: #EF233C;
+}
+
+input:focus{
+    border: #62B6CB solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 5px 0px;
+}
+
 

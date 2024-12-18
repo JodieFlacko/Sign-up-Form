@@ -23,6 +23,15 @@
 
 }
 
+@font-face {
+    font-family: 'abelregular';
+    src: url('abel-regular-webfont.woff2') format('woff2'),
+         url('abel-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -38,7 +47,7 @@ img{
 }
 
 /* Inherits for form control */
-input, button, textarea, select {
+input, button, textarea, select, label {
     font-family: inherit;
     font-size: 100%;
 }
@@ -106,6 +115,9 @@ em{
     flex: 0.9;
     background-color: rgb(173, 176, 167, 0.8);
     box-shadow: 0px -5px 5px -5px #0D240E, 0px 5px 5px -5px #0D240E;
+    font-family: "abelregular", Arial, Helvetica, sans-serif;
+    color: rgb(14, 42, 15, 0.9);
+    padding: 0 35px;
 }
 
 .footer{
@@ -113,6 +125,24 @@ em{
     flex: 1;
 }
 
-span.italic{
-    font-style: italic;
+label{
+    display: inline-block;
+    width: 100%;
 }
+
+label span{
+    font-weight: 600;
+}
+
+p{
+    display: inline-block;
+    width: 45%;
+    margin: 10px 0;
+}
+input{
+    width: 70%;
+    border: 1px solid rgb(13, 36, 14, 0.5);
+    height: 25px;
+    border-radius: 3px;
+}
+

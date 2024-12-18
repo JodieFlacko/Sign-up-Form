@@ -83,6 +83,7 @@ aside{
     flex-direction: column;
     justify-content: center;
     width: 65%;
+    position: relative;
 }
 
 .header{
@@ -154,16 +155,20 @@ input{
     padding: 30px 45px;
 }
 
-.footer button{
+.form-wrapper button{
+    position: absolute;
     padding: 12px 50px;
     border: none;
     border-radius: 6px;
     font-weight: 600;
     color: rgb(14, 42, 15, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    top: 640px;
+    left: 45px;
 }
 
 .footer p{
-    margin-top: 20px;
+    margin-top: 70px;
     display: block;
     font-family: inherit;
     color: rgb(208, 212, 202);
@@ -180,15 +185,15 @@ input{
     color: rgb(14, 42, 15, 0.9);
 }
 
-.footer a:active{
-    color: rgba(7, 20, 7, 0.9);
-}
-
 .footer a:visited{
     color: hsl(185, 80%, 35%);
 }
 
-.footer a:focus{
-    
+.footer a:active{
+    color: rgba(14, 42, 14, 0.7);
+}
+
+.form-wrapper button:active{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 

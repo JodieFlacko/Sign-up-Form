@@ -114,12 +114,12 @@ em{
 }
 
 .form-wrapper{
-    flex: 0.9;
+    flex: 1.2;
     background-color: rgb(173, 176, 167, 0.8);
     box-shadow: 0px -5px 5px -5px #0D240E, 0px 5px 5px -5px #0D240E;
     font-family: "abelregular", Arial, Helvetica, sans-serif;
     color: rgb(14, 42, 15, 0.9);
-    padding: 20px 45px;
+    padding: 20px 55px;
     position: relative;
 }
 
@@ -164,7 +164,7 @@ input{
     font-weight: 600;
     color: rgb(14, 42, 15, 0.9);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    top: 340px;
+    bottom: -60px;
     left: 45px;
 }
 
@@ -198,6 +198,12 @@ input{
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
+.password-helper{
+    margin-top: 30px;
+    color: rgb(14, 42, 15, 0.6);
+    font-size: 80%;
+}
+
 /* Validation styling */
 
 input[type="password"]:user-invalid{
@@ -206,14 +212,15 @@ input[type="password"]:user-invalid{
 
 span.error{
     display: inline-block;
-    position: absolute;
-    left: 45px;
-    bottom: 35px;
+    position: relative;
 }
 
-input[type="password"] + span.error::after{
-    content: "* Password do not match";
+input[type="password"]:user-invalid + span.error::after{
+    content: "* Password does not match requirements";
     display: inline-block;
+    position: block;
+    right: 5px;
+    top: 15px;
     width: 12.3vw;
     position: absolute;
     font-size: 70%;

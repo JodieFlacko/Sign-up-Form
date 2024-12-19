@@ -45,13 +45,14 @@
                     </p>
                     <p>
                         <label for="pwd"><span>PASSWORD <strong><span aria-label="required">*</span></strong></span></label>
-                        <input type="password" id="pwd" name="password" required>
+                        <input type="password" id="pwd" name="password" required pattern="^(?=.*[a-z])(?=.*\d).+$" minlength="8">
                         <span class="error"></span>
                     </p>
                     <p>
                         <label for="confirm-pwd"><span>CONFIRM PASSWORD <strong><span aria-label="required">*</span></strong></span></label>
-                        <input type="password" id="confirm-pwd" name="password" required>
+                        <input type="password" id="confirm-pwd" name="password" required pattern="^(?=.*[a-z])(?=.*\d).+$" minlength="8">
                     </p>
+                    <div class="password-helper">Password should be at least 8 characters including number and a lowercase letter</div>
                     <button type="submit">Create Account</button>
                 </form>
             </div>

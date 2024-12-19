@@ -76,6 +76,7 @@ aside{
     display: flex;
     justify-content: center;
     margin: 0 15vw;
+    height: 100vh;
 }
 
 .content{
